@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeToDo, toggleTodo } from "../slices/TodoSlice";
+import { removeToDo, toggle } from "../slices/TodoSlice";
 
 const Todo = () => {
   let dispatch = useDispatch();
@@ -10,7 +10,7 @@ const Todo = () => {
     const newTodos = todoReducer.todos.map((todo, i) =>
       i === index ? { ...todo, active: !todo.active } : todo
     );
-    dispatch(toggleTodo(newTodos));
+    dispatch(toggle(newTodos));
   };
 
   const removeToDos = (id) => {

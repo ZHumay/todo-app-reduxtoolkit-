@@ -15,12 +15,12 @@ const todoSlice = createSlice({
     empty: (state) => {
       state.todos = [];
     },
-    toggleTodo: (state, action) => {
+    toggle: (state, action) => {
       state.todos = action.payload;
     }
   }
 });
 
-export const { addToDo, removeToDo, empty, toggleTodo } = todoSlice.actions;
+export const { addToDo, removeToDo, empty, toggle } = todoSlice.actions;
 
 export default todoSlice.reducer;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { empty, removeToDo, toggleTodo } from '../slices/TodoSlice';
+import { empty, removeToDo, toggle } from '../slices/TodoSlice';
 
 const Footer = () => {
   const { todoReducer } = useSelector((state) => state);
@@ -13,18 +13,18 @@ const Footer = () => {
 
   const changeList = () => {
     const activeTodos = todoReducer.todos.filter((item) => item.active);
-    dispatch(toggleTodo(activeTodos));
+    dispatch(toggle(activeTodos));
     setFilter('active');
   };
 
   const allList = () => {
-    dispatch(toggleTodo(todoReducer.todos));
+    dispatch(toggle(todoReducer.todos));
     setFilter('all');
   };
 
   const completedList = () => {
     const completedTodos = todoReducer.todos.filter((item) => !item.active);
-    dispatch(toggleTodo(completedTodos));
+    dispatch(toggle(completedTodos));
     setFilter('completed');
   };
 
