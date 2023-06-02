@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { empty, removeToDo, toggle } from '../slices/TodoSlice';
+import { empty, removeToDo, toggle } from '../../store/slices/TodoSlice';
 
 const Footer = () => {
   const { todoReducer } = useSelector((state) => state);

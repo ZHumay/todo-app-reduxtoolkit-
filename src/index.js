@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import todoReducer from "./slices/TodoSlice";
+import todoReducer from "./store/slices/TodoSlice";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 

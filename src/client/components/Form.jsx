@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { addToDo } from '../slices/TodoSlice';
+import { addToDo } from '../../store/slices/TodoSlice';
 
 const Form = () => {
     const [todo, settodo ] = useState("");
@@ -12,7 +12,6 @@ const Form = () => {
             todo: todo,
             active: true
         };
-    
         dispatch(addToDo(newTodo));
         settodo("");
         e.preventDefault();
